@@ -1,0 +1,12 @@
+"""A function the take a number and tells wether it is an armstrong number or not"""
+def is_armstrong_number(number: int) -> bool:
+    """A function the take a number and tells 
+    wether it is an armstrong number or not.
+    arg: number: int
+    Returns: bool
+    """
+    value: int = 0
+    string_number = str(number)
+    for _number in string_number:
+        value += int(_number) ** len(string_number)
+    return value == number
